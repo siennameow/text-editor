@@ -1,28 +1,33 @@
 /* app shell CSS */
 :root {
-  --primary: #31a9e1;
+  --primary: #a8a1fb;
   --gray: #ececec;
   --whitesmoke: #f5f5f5;
   --dark: #222;
   --monoaki: #272822;
-  --navbar-height: 50px;
+  --navbar-height: 100px;
 }
 
 body {
   margin: 0;
-  background-color: var(--monoaki);
+  /* background-color: var(--monoaki); */
+  background-image: url("https://c.tenor.com/AJBv6U1rfkQAAAAC/background-image-galaxy.gif");
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 30px;
+  background-color: #000000;
 }
 
 #navbar {
   height: var(--navbar-height);
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-image: url("../images/moon1.jpeg");
+  /* background-repeat: no-repeat; */
+  background-position: center;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -207,5 +212,6 @@ h1 {
 
   h1 {
     font-size: 18px;
+    color: white;
   }
 }
