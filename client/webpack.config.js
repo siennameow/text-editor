@@ -18,6 +18,30 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      title: 'Dreamcatcher Text Editor'
+    }),
+    new InjectManifest({
+      swSrc: './src/src-sw.js',
+      swDest: 'service-worker.js'
+    }),
+    new WebpackPwaManifest({
+      name: 'Dreamcatcher Text Editor',
+      short_name: 'D.T.E',
+      description: 'Keep track of important tasks!',
+      background_color: '#8f7ee2',
+      theme_color: '#8f7ee2',
+      start_url: './',
+      publicPath: './',
+      icons: [
+        {
+          src: path.resolve('assets/images/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: path.join('assets', 'icons'),
+        },
+      ],
+    })
       
     ],
 
