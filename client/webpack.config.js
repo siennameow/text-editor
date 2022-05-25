@@ -3,9 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
-
 module.exports = () => {
   return {
     mode: 'development',
@@ -22,10 +19,13 @@ module.exports = () => {
       template: './index.html',
       title: 'Dreamcatcher Text Editor'
     }),
+  // TODO: Add and configure workbox plugins for a service worker and manifest file.
+  //service worker
     new InjectManifest({
       swSrc: './src/src-sw.js',
       swDest: 'service-worker.js'
     }),
+    //manifest.json
     new WebpackPwaManifest({
       name: 'Dreamcatcher Text Editor',
       short_name: 'D.T.E',
@@ -45,14 +45,17 @@ module.exports = () => {
     ],
 
     module: {
+      // TODO: Add CSS loaders and babel to webpack.
+      //add css loader
       rules: [
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
+        //add babel
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
