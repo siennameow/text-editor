@@ -22,11 +22,13 @@ module.exports = () => {
   // TODO: Add and configure workbox plugins for a service worker and manifest file.
   //service worker
     new InjectManifest({
-      swSrc: './src/src-sw.js',
-      swDest: 'service-worker.js'
+      swSrc: './src-sw.js',
+      swDest: 'src-sw.js'
     }),
     //manifest.json
     new WebpackPwaManifest({
+      fingerprints: false,
+      inject: true,
       name: 'Dreamcatcher Text Editor',
       short_name: 'D.T.E',
       description: 'Keep track of important tasks!',
@@ -36,7 +38,7 @@ module.exports = () => {
       publicPath: './',
       icons: [
         {
-          src: path.resolve('assets/images/logo.png'),
+          src: path.resolve('src/images/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons'),
         },
