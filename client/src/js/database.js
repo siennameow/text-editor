@@ -30,10 +30,15 @@ export const putDb = async (id, content) => {
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log('GET all from the database');
-  const todosDb = await openDB('todos', 1);
-  const tx = todosDb.transaction('todos', 'readonly');
-  const store = tx.objectStore('todos');
+  //connect to DB and version we want to use
+  const todosDb = await openDB('jate', 1);
+  // make new transaction , specify the db we posting to and the data privilege of "readonly"
+  const tx = todosDb.transaction('jate', 'readonly');
+  //open the object store
+  const store = tx.objectStore('jate');
+  //use .getAll() method to grab all the content in the DB
   const request = store.getAll();
+  //confirm the data was fetched
   const result = await request;
   console.log('result.value', result);
   return result;
