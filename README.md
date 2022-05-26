@@ -24,9 +24,25 @@ Link to the deployed app on Heroku : https://dreamcatcher-texteditor.herokuapp.c
 
 GIF demonstrates the application functionality
 
-<img src="/assets/demo.gif">
+<img src="/assets/demo.gif" height="500px">
 
-Application Preview:
+Customized logo
+<img src="/assets/logocolor.png" height="200px">
+
+Customized header
+
+```javascript
+const header = `
+/*                                                  
+__  ___ ___  __  __ __  ___ __ _____ ____  _ ___ ___  
+| _\| _ \ __|/  \|  V  |/ _//  \_   _/ _/ || | __| _ \ 
+| v | v / _|| /\ | \_/ | \_| /\ || || \_| >< | _|| v / 
+|__/|_|_\___|_||_|_| |_|\__/_||_||_| \__/_||_|___|_|_\ 
+                                                       
+Dreamcatcher Text Editor
+*/                          
+`;
+```
 
 Console shows the application retrieves database, injecting to editor, and successfully saving to DB.
 <img src="/assets/preview1.png" >
