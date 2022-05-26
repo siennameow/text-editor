@@ -84,7 +84,6 @@ Use Heroku deployed link: https://dreamcatcher-texteditor.herokuapp.com/ and ins
 * [Node.js](https://nodejs.org/en/)
 * [idb](https://www.npmjs.com/package/idb)
 * [webpack](https://webpack.js.org/)
-* [webpack](https://webpack.js.org/)
 * [workbox](https://developers.google.com/web/tools/workbox/guides/get-started)
 
 ## License 📜
