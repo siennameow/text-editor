@@ -24,7 +24,7 @@ Link to the deployed app on Heroku : https://dreamcatcher-texteditor.herokuapp.c
 
 GIF demonstrates the application functionality
 
-<img src="/assets/demo.gif" height="500px">
+<img src="/assets/demo.gif">
 
 Application Preview:
 
