@@ -27,6 +27,7 @@ GIF demonstrates the application functionality
 <img src="/assets/demo.gif" height="500px">
 
 Customized logo
+
 <img src="/assets/logocolor.png" height="200px">
 
 Customized header
