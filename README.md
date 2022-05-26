@@ -6,13 +6,11 @@
 
 Dreamcatcher Text Editor was created as a simple text editor app that can function both online and offline, with a variety of data persistence options in order to ensure that data is not lost in any scenario. This application implement methods for getting and storing data to an `IndexedDB` database. It also use the `idb` package, which is a lightweight wrapper around the IndexedDB API. For use offline, this application can be downloaded to your desktop as an application. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
 
-Link to the deployed app on Heroku : https://dreamcatcher-text-editor.herokuapp.com/
+Link to the deployed app on Heroku : https://dreamcatcher-texteditor.herokuapp.com/
 
 ## Table of Contents 📖
 
 * [Application Preview ⭐](#application-preview-)
-* [Features 📋](#features-)
-* [Code Snippet 💻](#code-snippet-)
 * [Installation 🗳](#installation-)
 * [Usage 💡](#usage-)
 * [Technologies 🔧](#technologies-)
@@ -24,8 +22,7 @@ Link to the deployed app on Heroku : https://dreamcatcher-text-editor.herokuapp.
 
 GIF demonstrates the application functionality
 
-<img src="/assets/demo.gif">
-
+<img src="/assets/demo.gif" height="700px">
 
 Application Preview:
 
@@ -40,6 +37,36 @@ The following image shows the application's registered service worker:
 
 The following image shows the application's IndexedDB storage:
 <img src="/assets/preview3.png" >
+
+## Installation 🗳 
+
+- Open Heroku deployed application : https://dreamcatcher-texteditor.herokuapp.com/
+- Go to the link and hit the "install" button to install the app locally.
+
+For repo clone or download: 
+- Download or clone repository to use this application on local machine.
+- Node.js is required to run the application
+- To install necessary dependencies, run the following command :
+>    `npm i`
+- Run `npm run start:dev` and `npm run start` in terminal to start. 
+- Then go to http://localhost:3000/ to run this application on your local machine.
+
+## Usage 💡
+
+Use Heroku deployed link: https://dreamcatcher-texteditor.herokuapp.com/ and install if you want to use it offline.
+
+
+## Technologies 🔧
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [express.js](https://expressjs.com/)
+* [Node.js](https://nodejs.org/en/)
+* [idb](https://www.npmjs.com/package/idb)
+* [webpack](https://webpack.js.org/)
+* [webpack](https://webpack.js.org/)
+* [workbox](https://developers.google.com/web/tools/workbox/guides/get-started)
 
 ## License 📜
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/text-editor/blob/main/LICENSE)
