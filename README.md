@@ -1,4 +1,4 @@
-# Dreamcatcher Text Editor
+# Dreamcatcher Text Editor 🌙
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/text-editor/blob/main/LICENSE)
 
@@ -22,7 +22,7 @@ Link to the deployed app on Heroku : https://dreamcatcher-texteditor.herokuapp.c
 
 GIF demonstrates the application functionality
 
-<img src="/assets/demo.gif" height="700px">
+<img src="/assets/demo.gif" height="500px">
 
 Application Preview:
 
