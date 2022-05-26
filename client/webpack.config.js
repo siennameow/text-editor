@@ -32,8 +32,8 @@ module.exports = () => {
       name: 'Dreamcatcher Text Editor',
       short_name: 'D.T.E',
       description: 'Keep track of important tasks!',
-      background_color: '#8f7ee2',
-      theme_color: '#8f7ee2',
+      background_color: '#0F111A',
+      theme_color: '#0F111A',
       start_url: './',
       publicPath: './',
       icons: [
