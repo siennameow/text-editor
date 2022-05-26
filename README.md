@@ -30,120 +30,16 @@ GIF demonstrates the application functionality
 Application Preview:
 
 Console shows the application retrieves database, injecting to editor, and successfully saving to DB.
-<img src="/assets/welcome.png" >
+<img src="/assets/preview1.png" >
 
 The following image shows the application's manifest.json file:
-<img src="/assets/prompt.png" >
+<img src="/assets/preview2.png" >
 
 The following image shows the application's registered service worker:
-<img src="/assets/table.png">
+<img src="/assets/preview4.png">
 
 The following image shows the application's IndexedDB storage:
-<img src="/assets/bye.png" >
-
-
-## Features 📋
-
-⚡️ `inquirer` to interact with the user via the command line\
-⚡️ `mysql2` module to connect to MySQL database and perform queries\
-⚡️ `console.table` module to print MySQL rows to the console
-
-
-## Code Snippet 💻
-
-JavaScript
-
-Function to query database and allow user to view the total utilized budget of a department
-
-```JavaScript
-function budgetUtilized (){
-db.query (
-  `SELECT DISTINCT name from department`, (err,result) =>{
-  if (err) throw err;
-  inquirer.prompt({
-        name: "department",
-        type: "list",
-        message: "Which department would you like to view?",
-        choices: () =>
-        result.map((result) => result.name),
-        })
-        .then ((answer) => {
-          db.query (
-          `SELECT name AS department, SUM(salary) AS utilized_budget
-          FROM employee
-          LEFT JOIN role
-          ON employee.role_id = role.id
-          LEFT JOIN department
-          ON role.department_id = department.id
-          WHERE name = "${answer.department}"
-          GROUP BY name`, (err,finalResult) =>{
-            if (err) throw err;
-            console.table("The combined salaries of all employees in " + answer.department + " department is:", finalResult);
-            initPrompt();
-        })
-  })
-})
-}
-```
-
-Function to prompt user and lelete roles from database
-
-```JavaScript
-function deleteRole () {
-  db.query("SELECT DISTINCT title FROM role", (err, result) => {
-    if (err) throw err;
-    inquirer.prompt({
-        name: "title",
-        type: "list",
-        message: "Which role would you like to delete?",
-        choices: () => 
-          result.map((result) => result.title)
-      })
-      .then ((answer) => {
-      db.query(`SET FOREIGN_KEY_CHECKS=0;
-      DELETE FROM role WHERE ?`, {title: answer.title},
-          (err, result) => {
-              if (err) throw err;
-              console.log(
-                "Successfully deleted the " + answer.title + " role."
-              );
-              initPrompt();
-          });
-      })
-  })
-}
-```
-
-## Installation 🗳 
-
-- Download or clone repository to use this application on local machine.
-- Node.js is required to run the application
-- To install necessary dependencies, run the following command :
->    `npm i`
-
-## Usage 💡
-
-After installation :
-
-1. Run `node index.js` in terminal to start. 
-2. Follow through the prompts as required. 
-
-Note:
-
-- Need to be in the main folder in terminal when running the command.
-- If you choose not to use the dummy data, I recommend create your own database from scratch.
-- I recommend first creating the table for departments, then the roles within each departments, and then the employees.
-- This is important becasue "add", "delete" and "view by" are prompted by lists generated from database.
-
-## Technologies 🔧
-
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [inquirer.js](https://www.npmjs.com/package/inquirer)
-* [Node.js](https://nodejs.org/en/)
-* [MySQL](https://www.mysql.com/)
-* [console.table](https://www.npmjs.com/package/console.table)
+<img src="/assets/preview3.png" >
 
 ## License 📜
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/text-editor/blob/main/LICENSE)
