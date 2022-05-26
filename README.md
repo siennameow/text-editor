@@ -1,6 +1,6 @@
 # Dreamcatcher Text Editor 🌙
 
-![Screen Shot 2022-05-25 at 10 54 50 PM](https://user-images.githubusercontent.com/101283174/170425960-783178f8-3121-47f8-93de-e7e9c14423e1.png)
+![Screen Shot 2022-05-25 at 10 55 52 PM](https://user-images.githubusercontent.com/101283174/170426085-d3594eba-c490-4edb-a456-1f5039b4e90a.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/text-editor/blob/main/LICENSE)
 
